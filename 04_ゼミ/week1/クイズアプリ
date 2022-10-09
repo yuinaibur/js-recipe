@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>WebExpertコーステンプレート</title>
+  </head>
+  <body>
+    <div id="element">こんにちは</div>
+    <button id="button1">りんご</button>
+    <button id="button2">みかん</button>
+    <button id="button3">ばなな</button>
+    <div id="element2">正解は…</div>
+    <script>
+      const element = document.getElementById("element"); //  document.getElementById("id")を使うことで指定したidのHTML要素を取得できる
+
+      const element2 = document.getElementById("element2");
+
+      console.dir(element); // console.dir() を使えば、HTML要素がプロパティに何を持っているのかが分かる
+      console.dir(element2);
+      element.textContent = " 好きな食べ物は？"; // 要素のプロパティを書き換えることで、DOMを操作できる
+
+      // イベントが発生する要素を取得する
+      const button1 = document.getElementById("button1");
+      const button2 = document.getElementById("button2");
+      const button3 = document.getElementById("button3");
+      // 関数を作成して変数にいれる
+      const Message1 = function () {
+        element2.textContent = "正解です！！";
+      };
+      const Message2 = function () {
+        element2.textContent = "残念";
+      };
+      const Message3 = function () {
+        element2.textContent = "残念";
+      };
+
+      // 関数を登録
+      button1.onclick = Message1;
+      button2.onclick = Message2;
+      button3.onclick = Message3;
+    </script>
+  </body>
+</html>

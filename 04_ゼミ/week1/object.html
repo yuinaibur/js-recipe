@@ -12,7 +12,10 @@
         name: "のむらゆいな",
         isMentor: false,
         university: { name: "つくば大学", class: 3 },
-        hobbies: (2)[("カフェ巡り", "アルティメット")],
+        hobbies: ["カフェ巡り", "アルティメット"],
+        hello: function() {
+          console.log("よろしくお願いします！")
+        },
       }
 
       // 0 表示する
@@ -37,8 +40,9 @@
       console.log(`学年は、${me.university.class}年です!`)
 
       // 5 配列
-      for (let i = 0; i < me.hobbies.length; i++) {
-        console.log(`私の趣味は${me.hobbies}です`) // この行を書き換えて、趣味が1つずつ表示されるようにしてください。
+      for (let i = 1; i < me.hobbies.length; i++) {
+        console.log(`私の趣味は${me.hobbies[0]}です`) // この行を書き換えて、趣味が1つずつ表示されるようにしてください。
+        console.log(`私の趣味は${me.hobbies[1]}です`)
       }
 
       // 6 関数

@@ -16,7 +16,7 @@ const createCard = function(){
     const card = document.createElement("div")
     card.className = "card"
 
-    const todo = document.createElement("div)
+    const todo = document.createElement("div")
     todo.className = "todo"
     todo.textContent = text
     card.append(todo)
